@@ -4,13 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>English Classes with Florencia Villarreal</title>
+    <!-- Add the Google Fonts link here -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Open Sans', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #e0f7fa;
+            background: url('images/background.webp') no-repeat center center fixed;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
         }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.7); /* Adjust the transparency here */
+            z-index: -1;
+        }
+
+
         input, textarea {
             width: 100%;
             padding: 10px;
@@ -28,10 +48,53 @@
         }
         .card {
             background-color: white;
-            padding: 20px;
-            margin: 10px 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            opacity: 0.95; /* Adds slight transparency */
         }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+        .header p {
+            font-size: 1.2em;
+            font-weight: 400;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+
+        /* Add your button styling here */
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease; /* Transición suave */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
 
         @media (max-width: 768px) {
             .container {
@@ -57,16 +120,18 @@
     </div>
 
     <div class="container">
-        <div class="card">
+        <div class="card clearfix">
             <h2>About Me</h2>
-            <p>I am a National Sworn Translator of English and have been teaching English for several years. I specialize in teaching adults and teenagers in virtual classes. My classes are designed to help you reach fluency through practical and interactive methods.</p>
+            <img src="images/profile.jpg" alt="Florencia Villarreal" style="width:180px; border-radius:50%; float:left; margin-right:20px; margin-bottom:20px;">
+            <p>I am a National Sworn Translator of English and have been teaching English for several years...</p>
         </div>
 
         <div class="card">
             <h2>Contact Information</h2>
-            <p>Email: florenciavillarreallq@gmail.com</p>
-            <p>Phone: 3515744895</p>
-            <p>Location: Buenos Aires, Argentina</p>
+            <p><i class="fas fa-envelope"></i> Email: florenciavillarreallq@gmail.com</p>
+            <p><i class="fas fa-phone"></i> Phone: 3515744895</p>
+            <p><i class="fas fa-map-marker-alt"></i> Location: Buenos Aires, Argentina</p>
+
         </div>
 
         <div class="card">
@@ -80,7 +145,7 @@
 
         <div class="card">
             <h2>Testimonials</h2>
-            <p>"Florencia is a fantastic teacher! Her methods helped me become fluent in English much faster than I expected." - Student A</p>
+            <p style="font-style: italic; font-size: 1.2em;">"Florencia is a fantastic teacher! Her methods helped me become fluent in English much faster than I expected." - Student A</p>
             <p>"Thanks to Florencia's classes, I passed my IELTS exam with a high score!" - Student B</p>
         </div>
 
@@ -100,7 +165,7 @@
             </form>
         </div>
         
-        <div class="card" style="text-align:center;">
+        <footer style="text-align: center; padding: 20px; background-color: #4CAF50; color: white; position: fixed; width: 100%; bottom: 0;">
             <p>© 2024 Florencia Villarreal. All rights reserved.</p>
         </div>
         
